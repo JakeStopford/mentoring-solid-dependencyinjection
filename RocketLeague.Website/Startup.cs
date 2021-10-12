@@ -21,6 +21,9 @@ namespace RocketLeague.Website
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IRocketLeagueInteractor, RocketLeagueInteractor>();
+            services.AddScoped<IVehicleService, VehicleService>(); 
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

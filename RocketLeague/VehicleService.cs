@@ -3,13 +3,13 @@ using RocketLeague.Data;
 
 namespace RocketLeague
 {
-    public class VehicleService
+    public class VehicleService : IVehicleService
     {
-        private readonly VehicleRepository _vehicleRepository;
+        private readonly IVehicleRepository _vehicleRepository;
         
-        public VehicleService()
+        public VehicleService(IVehicleRepository vehicleRepository)
         {
-            _vehicleRepository = new VehicleRepository();
+            _vehicleRepository = vehicleRepository;
         }
 
         public List<Vehicle> GetAllVehicles()

@@ -3,13 +3,13 @@ using RocketLeague.Website.ViewModels;
 
 namespace RocketLeague.Website.Interactors
 {
-    public class RocketLeagueInteractor
+    public class RocketLeagueInteractor : IRocketLeagueInteractor
     {
-        private readonly VehicleService _vehicleService;
+        private readonly IVehicleService _vehicleService;
 
-        public RocketLeagueInteractor()
+        public RocketLeagueInteractor(IVehicleService vehicleService)
         {
-            _vehicleService = new VehicleService();
+            _vehicleService = vehicleService;
         }
 
         public RocketLeagueViewModel GetViewModel()

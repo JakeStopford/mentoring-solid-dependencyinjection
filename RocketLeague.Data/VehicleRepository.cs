@@ -2,7 +2,7 @@
 
 namespace RocketLeague.Data
 {
-    public class VehicleRepository
+    public class VehicleRepository : IVehicleRepository
     {
         public List<Vehicle> GetVehicles()
         {

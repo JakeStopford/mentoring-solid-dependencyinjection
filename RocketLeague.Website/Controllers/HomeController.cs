@@ -5,11 +5,11 @@ namespace RocketLeague.Website.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly RocketLeagueInteractor _rocketLeagueInteractor;
+        private readonly IRocketLeagueInteractor _rocketLeagueInteractor;
 
-        public HomeController()
+        public HomeController(IRocketLeagueInteractor rocketLeagueInteractor)
         {
-            _rocketLeagueInteractor = new RocketLeagueInteractor();
+            _rocketLeagueInteractor = rocketLeagueInteractor;
         }
 
         public IActionResult Index()
